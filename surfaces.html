@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Surface Viewer</title>
+<script src="https://twgljs.org/dist/4.x/twgl-full.min.js"></script>
+<script src="shader_programs.js"></script>
+<script src="surface_viewer.js"></script>
+<script src="main.js"></script>
+
+<style>
+html,body {margin:0; padding:0;height:100%; overflow:hidden; }
+canvas { width:100%; height:100%; touch-action: none;
+        cursor:pointer;}
+#gui {
+    position:absolute;
+    left:10px;
+    bottom:0px;
+    width:100px;
+    height:50px;
+}
+</style>
+</head>
+<body>
+<canvas id="surface-viewer"></canvas>
+<script>
+
+
+/*
+
+var targetState = 0;
+var state = 0;
+var parameters = [
+    [0,0,0],
+    [1,0,0],
+    [1,0.4,0],
+    [1,0.4,1.0],    
+];
+
+function setParameters(s) {
+    state = s;
+    var values;
+    var m = parameters.length;
+    if(state<=0) { 
+        state=0; 
+        values = parameters[0]; 
+    }
+    else if(state>=m-1) { 
+        state=m-1; 
+        values = parameters[m-1]; 
+    }
+    else {
+        var i = Math.floor(state);
+        var u = state - i;
+        values = [0,0,0];
+        for(var j=0;j<3;j++) {
+            values[j] = (1-u)*parameters[i][j] 
+                  + u*parameters[i+1][j];
+        }
+    }
+    for(var j=0;j<3;j++) {
+        viewer.uniforms.u_cc[j] = values[j];
+    }
+    
+}
+
+function tick() {
+    if(targetState>state) {
+        state += 0.01;
+        if(state>targetState) state=targetState;
+        setParameters(state);
+    } else if(targetState<state) {
+        state -= 0.01;
+        if(state<targetState) state=targetState;
+        setParameters(state);
+    }
+}
+*/
+
+</script>
+</body>
+</html>
